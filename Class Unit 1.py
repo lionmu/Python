@@ -59,10 +59,79 @@
 #rint (a,b,c,d, type(a),type(b),type(c),type(d),sep="\n")
 
 #string str() converts other data types to string
-a=str(65)
-b=str(1.5)
-c=str(1+2j)
-d=str("LONE RANGER")
+#a=str(65)
+#b=str(1.5)
+#c=str(1+2j)
+#d=str("LONE RANGER")
 
-print (a,b,c,d,type(a),type(b),type(c),type(d),sep=":" "\n")
-#
+#print (a,b,c,d,type(a),type(b),type(c),type(d),sep=":" "\n")
+
+#Relational operators Aka known as ternary operators used to evaluate expression basing on conditions
+# < less than
+# > greater than
+#  >= greater than or equal to
+# <= less than or equal to
+#  == equal or equal to
+#  =! not equal to
+#syntax comparing two conditions
+#a=int(input("Enter Number 1:"))
+#b=int(input("Enter NUmber 2:"))
+#print( "Greater than")if a>b else print("Less Than")
+
+#c=int(input("Enter NUmber 3:"))
+#d=int(input("Enter Number 4:"))
+#print("Equal to") if c==d else print("Not Equal")
+
+#e=int(input("Enter Number 5:"))
+#print("odd")if e%5==0 else print("even")
+
+#logical operators these are used to combine boolean expressions
+#and all boolean expressions have to be true so as the result to be true else false
+#or one of the boolean expressions have to be true as the result to be true else false
+#not is the opposite of the boolean expression
+
+
+#a=int(input("Enter Roll Number:"))
+#b=input("Enter Name:")
+#c=int(input("Enter Marks for Course A:"))
+#d=int(input("Enter MArks for Course B:"))
+#print("Passed Exam" ,sep="\n")if c>=50 and d>=50 else print("Failed Exam")
+
+#a=int(input("Enter Roll Number:"))
+#b=input("Enter Name:")
+#c=int(input("Enter Marks for Course A:"))
+#d=int(input("Enter MArks for Course B:"))
+#print("Passed Exam" ,sep="\n")if c>=50 or d>=50 else print("Failed Exam")
+
+#a=int(input("Enter Roll Number:"))
+#b=input("Enter Name:")
+#c=int(input("Enter Marks for Course A:"))
+#d=int(input("Enter MArks for Course B:"))
+#print("Passed Exam" ,sep="\n")if c>=50 and not d>=50 else print("Failed Exam")
+
+# Bitwise OPerators THese are used to convert Data into 0s and 1s
+#types of bit operators
+
+#>> Right Shift operator shifts bits to the right filling the left hand side with 0s (for positive integers)
+#syntax
+#a=10
+#b=a>>2
+#print(b)
+#10 in binary is 1010 discard the last two bits and replace with 0 outout will be 10  00 which is 2 in binary
+#a>>2 is the same as a//2n where n is the shift amount
+
+#<<Left Shift operator shifts bits to the left side filing the right hand side with 0s
+#a=10
+#b=a<<3
+#print(b)
+#10 in binary is 1010 shift all the bits to the left by adding 3 0s as the shift is 3 which will becomw 1010 000
+#a<<3 is the same as a*2n where n is the shift amount
+#which is binary 80
+#& bitwise and operator: the and operator returns the first falsy value if one exists, otherwise it returns the last truthy value.
+#a=20
+#b=30
+#c=a and b
+#print (a,b,c)
+#print (bin(a),bin(b),bin(c),sep=":") will print the values in binary
+#^ logical or and
+#~
