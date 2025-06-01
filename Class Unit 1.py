@@ -65,3 +65,4 @@ c=str(1+2j)
 d=str("LONE RANGER")
 
 print (a,b,c,d,type(a),type(b),type(c),type(d),sep=":" "\n")
+#
