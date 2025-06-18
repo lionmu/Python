@@ -1,3 +1,6 @@
-Name: 10, Roll: 20, Grade: lio
-Name: 1072214, Roll: A, Grade: Lester City
-Name: 102335424, Roll: 6, Grade: Thomas Aquinos
+Student_Roll_Number: 012240506, Student_Grade BNCS, Student_Name: Lionel Ssengooba Musoke
+Student_Roll_Number: 1534, Student_Course bncs, Student_Name: tert
+Student_Roll_Number: 54543, Student_Course it, Student_Name: paul
+Student_Roll_Number: 4343, Student_Course bncs, Student_Name: hig
+Student_Roll_Number: 9878, Student_Course bncs, Student_Name: lies
+Student_Roll_Number: 98975, Student_Course bncs, Student_Name: kjhk

@@ -9,14 +9,14 @@
 
 print("***********************WELCOME TO OUR CHESTAMORE UNVERSITY STUDENT PORTAL*********************************"  ,sep="\n")
 print("PLEASE PRESSE ENTER YOUR STUDENT DETAILS")
-Roll_number=(input("Enter Roll Number:"))
-Grade=(input("Enter Grade:"))
+Roll_Number=(input("Enter Roll Number:"))
+Course=(input("Enter Course:"))
 Name=(input("Enter Student Name:"))
 
 
 print("Student Name:",Name)
-print("Student Roll Number:",Roll_number)
-print("Student Grade:" ,Grade)
+print("Student Roll Number:",Roll_Number)
+print("Student Course:" ,Course)
 
 #creating the file called student.text file creating it in append mode so that new entry will be written at the end. Data entered should save automatically in the student.txt
 open('student.txt', 'a')
@@ -24,8 +24,29 @@ open('student.txt', 'a')
 #student.txt created in the default folder next command is to store the details received  from the variables having the fil. the input will be written.
 
 with open('student.txt', 'a') as file:
-    file.write(f"Name: {Roll_number}, Roll: {Grade}, Grade: {Name}\n")
+    file.write(f"Student_Roll_Number: {Roll_Number}, Student_Course {Course}, Student_Name: {Name}\n")
 
 print("THE STUDENT HAS BEEN ADDED SUCCESSFULLY TO THE DATABASE")
+#print ("WOULD YOU LIKE FURTHER ASSISTANCE")
+
+with open("student.txt", "r") as file:
+     students = file.readlines()
+    #print("\n--- CURRENT STUDENT LIST ---")
+    #print(file.read())
+
+#with open("student.txt", "w") as file:
+    #file.write("")  
+
+removal_using_Roll_number =(input("Enter ROll Number to Delete:"))
+#Read the file and keep only non-matching records
+with open("student.txt", "r") as file:
+    all_lines = file.readlines()
+
+    with open("student.txt", "w") as file:
+     for line in all_lines:
+        if not line.startswith(removal_using_Roll_number + ","):
+            file.write(line)
+
+print(f"Roll number {removal_using_Roll_number} has been deleted.")
 
 
