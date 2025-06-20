@@ -25,28 +25,28 @@ open('student.txt', 'a')
 
 with open('student.txt', 'a') as file:
     file.write(f"Student_Roll_Number: {Roll_Number}, Student_Course {Course}, Student_Name: {Name}\n")
-
-print("THE STUDENT HAS BEEN ADDED SUCCESSFULLY TO THE DATABASE")
-#print ("WOULD YOU LIKE FURTHER ASSISTANCE")
-
+    #Displaying all students
+print("\n--- STUDENT LIST ---")
 with open("student.txt", "r") as file:
-     students = file.readlines()
-    #print("\n--- CURRENT STUDENT LIST ---")
-    #print(file.read())
-
-#with open("student.txt", "w") as file:
-    #file.write("")  
-
-removal_using_Roll_number =(input("Enter ROll Number to Delete:"))
-#Read the file and keep only non-matching records
-with open("student.txt", "r") as file:
-    all_lines = file.readlines()
-
+    for line in file:
+        print(line.strip())
+#Adding the Delete Function using the roll number.
+print("DELETE RECORDS")
+delete_choice=input("DO YOU WANT TO DELETE A RECORD? (yes/no)").lower()
+if delete_choice == 'yes':
+    deleting_roll = input("ENTER ROLL NUMBER TO DELETE: ")
+   #Reading all records stored in studdent.text 
+    with open("student.txt", "r") as file:
+        student_records = file.readlines()
+    
     with open("student.txt", "w") as file:
-     for line in all_lines:
-        if not line.startswith(removal_using_Roll_number + ","):
-            file.write(line)
+        for student in student_records:
+            if not student.startswith(f"Student_Roll_Number: {deleting_roll},"):
+                file.write(student)
+    
+    print(f"Roll Number {deleting_roll} Deleted Successfully!")
 
-print(f"Roll number {removal_using_Roll_number} has been deleted.")
-
-
+elif delete_choice == 'no':
+    print("Goodbye!")
+else:
+    print("Invalid Input. Please Enter 'yes' or 'no'.")

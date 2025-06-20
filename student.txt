@@ -1,6 +1,3 @@
-Student_Roll_Number: 012240506, Student_Grade BNCS, Student_Name: Lionel Ssengooba Musoke
-Student_Roll_Number: 1534, Student_Course bncs, Student_Name: tert
-Student_Roll_Number: 54543, Student_Course it, Student_Name: paul
-Student_Roll_Number: 4343, Student_Course bncs, Student_Name: hig
-Student_Roll_Number: 9878, Student_Course bncs, Student_Name: lies
-Student_Roll_Number: 98975, Student_Course bncs, Student_Name: kjhk
+Student_Roll_Number: 30111986, Student_Course BNCS, Student_Name: MAria Nabi
+Student_Roll_Number: 06041988, Student_Course BNCS, Student_Name: Brenda N
+Student_Roll_Number: 123232, Student_Course BNCS, Student_Name: Clause Santa
