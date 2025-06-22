@@ -1,0 +1,80 @@
+
+
+
+Student Name: Lionel Ssengooba Musoke
+Roll Number: 012240506
+Course Name: Programming in Python Lab 
+
+Course Code: BNCS1213
+
+
+
+
+
+Question:
+
+Create a simple Python program that manages student data in a file. The program should allow the following operations: Add a student: The user should be able to add a new student's information (roll number, name, and grade) to the file students.txt. The data should be appended to the file. Delete a student: The user should be able to delete a student from the file by entering the student's roll number. The program should search for the roll number in the file and remove that student's record. Exit: The program should allow the user to exit the program.
+•	Code to accept user input in the variables named, Roll_Number, Course and Name
+•	Line Code that will create a file named student.txt so as to store the user input for the variables using ‘append’
+•	Code calling out the list indicating all the input that has been assigned by the user
+•	Adding the delete function basing on IF the user chooses to delete a record when prompted.
+•	Elseif the program Terminates if not prompted or else input the correct response.
+
+•	Program run prompting users to enter details and display the list:
+•	Versus Student.txt stored output in program location.
+•	Prompting Student to delete the record
+
+•	Confirmation that deleted entry has been removed from the student.txt file and list updated
+
+
+
+
+
+Exercise Code
+print("***********************WELCOME TO OUR CHESTAMORE UNVERSITY STUDENT PORTAL*********************************"  ,sep="\n")
+print("PLEASE PRESS ENTER YOUR STUDENT DETAILS")
+Roll_Number=(input("Enter Roll Number:"))
+Course=(input("Enter Course:"))
+Name=(input("Enter Student Name:"))
+
+print("Student Name:",Name)
+print("Student Roll Number:",Roll_Number)
+print("Student Course:" ,Course)
+
+#creating the file called student.text file creating it in append mode so that new entry will be written at the end. Data entered should save automatically in the student.txt
+open('student.txt', 'a')
+
+#student.txt created in the default folder next command is to store the details received  from the variables having the fil. the input will be written.
+
+with open('student.txt', 'a') as file:
+    file.write(f"Student_Roll_Number: {Roll_Number}, Student_Course {Course}, Student_Name: {Name}\n")
+    #Displaying all students
+print("\n--- STUDENT LIST ---")
+with open("student.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+#Adding the Delete Function using the roll number.
+print("DELETE RECORDS")
+delete_choice=input("DO YOU WANT TO DELETE A RECORD? (yes/no)").lower()
+if delete_choice == 'yes':
+    deleting_roll = input("ENTER ROLL NUMBER TO DELETE: ")
+   #Reading all records stored in student.text 
+    with open("student.txt", "r") as file:
+        student_records = file.readlines()
+    
+    with open("student.txt", "w") as file:
+        for student in student_records:
+            if not student.startswith(f"Student_Roll_Number: {deleting_roll},"):
+               file.write(student)
+    
+    print(f"Roll Number {deleting_roll} Deleted Successfully!")
+
+print("\n--- UPDATED STUDENT LIST ---")
+with open("student.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+         
+    else: delete_choice == 'no'
+print("Goodbye!")
+
+
