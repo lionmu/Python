@@ -35,7 +35,7 @@ print("DELETE RECORDS")
 delete_choice=input("DO YOU WANT TO DELETE A RECORD? (yes/no)").lower()
 if delete_choice == 'yes':
     deleting_roll = input("ENTER ROLL NUMBER TO DELETE: ")
-   #Reading all records stored in studdent.text 
+   #Reading all records stored in student.text 
     with open("student.txt", "r") as file:
         student_records = file.readlines()
     
@@ -45,6 +45,8 @@ if delete_choice == 'yes':
                 file.write(student)
     
     print(f"Roll Number {deleting_roll} Deleted Successfully!")
+    
+    
 
 elif delete_choice == 'no':
     print("Goodbye!")
