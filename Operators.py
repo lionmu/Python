@@ -39,4 +39,4 @@ print(a>4 and b<10) #Both conditions are true so it will print TRUE as output
 print (a>4 or b<2)
 #logical Not : Will give the opposite of the output. if true it will return false and the reverse is true
 #Example
-print(not c )
+print(not (c) )
