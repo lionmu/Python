@@ -75,16 +75,65 @@ print (a>>2)
 
 #identity operators: these operators compare objects to their memory addresses. if the objects are the same
 #same memory is shared. if different then memory address will be different.
-#Example is
+#Example is and is not operator
 print(a is b) #will return false because dont share the same memory address.
 print(id(a)) #memory ID is different
 print (id(b)) #memory ID is different.
 print(a is not b) #will return true since the memory ID for a is not the same with that of B
-
 
 d=5
 d=8
 print (id(d))
 print (d is d)
 
-#Membership Operator:
+#Membership Operator:used ot check characters, sub strings present in sequencies eg sets dictionary
+#strings
+#Example  using the in membership operator  and NOt in
+
+str= 'Lionel'
+print('l' in str) #will return True because there is a small l in the string
+
+#Example using the Not in membership operator
+print('M' in str)   #will Return False because M is not in the string.
+
+print('o' in str)
+
+#round function: used to round off numbers
+#syntax round (number, Number of digits you want to round off but this is optional)
+#Example
+print (round(675,-1))
+print(round(665,-1))
+print(round(12.545 ,-2))
+print(round(467,-4))
+
+
+#Exercise 4
+#Calculate BMI having Weight in KGs and Height in Meters squared. Output should be round off no decimals
+weight=input("Enter Your Weight in KGs:")
+height=input("Enter your Height In Meters:")
+BMI=int (weight)//float(height)**2
+print("YOUR Body Mass Index IS" , BMI)
+
+#F string: These are strings that are prefixed by the letter f. They enable you u concatinate many strings which
+#saves from using many commas and braces when you are having multiple strings
+#syntax
+name='Lionel Musoke'
+
+print(f'MY Name is {name} i am years old and my BMI is', BMI)
+
+#Exercise 5
+#Show how many days, weeks and months we have you have left to live with a life span of
+#90 years.
+from calendar import weekday
+
+age=int(input("ENTER YOUR CURRENT AGE:"))
+age_limit=90
+current_age_to_live=age_limit-age
+days=current_age_to_live*365
+weeks=days//30
+months=days//30
+
+
+print(f"You are  {current_age_to_live} years old" )
+print(f'With a total of {days} days, {weeks} weeks and {months} more years on Planet earth')
+
