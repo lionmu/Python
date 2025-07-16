@@ -1,5 +1,3 @@
-Student_Roll_Number: 701323045, Student_Course BNCS, Student_Name: Gorrettie
-Student_Roll_Number: 56212, Student_Course BNCS, Student_Name: Chris Mugisha
-Student_Roll_Number: 1769, Student_Course BNCS, Student_Name: Amos Nzeyi
-Student_Roll_Number: 67676, Student_Course BNCS, Student_Name: Kato
-Student_Roll_Number: 78787, Student_Course bncs, Student_Name: muswegaa
+Name: 10, Roll: 20, Grade: lio
+Name: 1072214, Roll: A, Grade: Lester City
+Name: 102335424, Roll: 6, Grade: Thomas Aquinos

@@ -9,14 +9,14 @@
 
 print("***********************WELCOME TO OUR CHESTAMORE UNVERSITY STUDENT PORTAL*********************************"  ,sep="\n")
 print("PLEASE PRESSE ENTER YOUR STUDENT DETAILS")
-Roll_Number=(input("Enter Roll Number:"))
-Course=(input("Enter Course:"))
+Roll_number=(input("Enter Roll Number:"))
+Grade=(input("Enter Grade:"))
 Name=(input("Enter Student Name:"))
 
 
 print("Student Name:",Name)
-print("Student Roll Number:",Roll_Number)
-print("Student Course:" ,Course)
+print("Student Roll Number:",Roll_number)
+print("Student Grade:" ,Grade)
 
 #creating the file called student.text file creating it in append mode so that new entry will be written at the end. Data entered should save automatically in the student.txt
 open('student.txt', 'a')
@@ -24,31 +24,8 @@ open('student.txt', 'a')
 #student.txt created in the default folder next command is to store the details received  from the variables having the fil. the input will be written.
 
 with open('student.txt', 'a') as file:
-    file.write(f"Student_Roll_Number: {Roll_Number}, Student_Course {Course}, Student_Name: {Name}\n")
-    #Displaying all students
-print("\n--- STUDENT LIST ---")
-with open("student.txt", "r") as file:
-    for line in file:
-        print(line.strip())
-#Adding the Delete Function using the roll number.
-print("DELETE RECORDS")
-delete_choice=input("DO YOU WANT TO DELETE A RECORD? (yes/no)").lower()
-if delete_choice == 'yes':
-    deleting_roll = input("ENTER ROLL NUMBER TO DELETE: ")
-   #Reading all records stored in student.text 
-    with open("student.txt", "r") as file:
-        student_records = file.readlines()
-    
-    with open("student.txt", "w") as file:
-        for student in student_records:
-            if not student.startswith(f"Student_Roll_Number: {deleting_roll},"):
-                file.write(student)
-    
-    print(f"Roll Number {deleting_roll} Deleted Successfully!")
-    
-    
+    file.write(f"Name: {Roll_number}, Roll: {Grade}, Grade: {Name}\n")
 
-elif delete_choice == 'no':
-    print("Goodbye!")
-else:
-    print("Invalid Input. Please Enter 'yes' or 'no'.")
+print("THE STUDENT HAS BEEN ADDED SUCCESSFULLY TO THE DATABASE")
+
+
