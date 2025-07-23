@@ -20,7 +20,7 @@ if option == 1:
     if extra_cheese=='yes':
         print('EXTRA CHEESE WILL COST 20Rs')
         total_cost=medium_pizza
-        print(f'PIZZA WILL COST{total_cost}')
+        print(f'PIZZA WILL COST YOU {total_cost}')
 
 
 else:
