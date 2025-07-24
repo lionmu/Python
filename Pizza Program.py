@@ -21,17 +21,20 @@ else:
 
 additional_pepperoni=input('EXTRA PEPPERONI (Y/N):')
 if additional_pepperoni.lower()=='y':
-  if option==1:
-   initial_cost+=30
+ if option==1:
+  initial_cost+=30
     
-  else:
-      initial_cost+=50
+ else:
+  initial_cost+=50
          
 additional_cheese=input('EXTRA CHEESE (Y/N):')
 if additional_cheese.lower()=='y':
-   initial_cost+=20
+ initial_cost+=20
           
 print(f'YOUR TOTAL BILL WILL BE {initial_cost}Rs')
 print('THANK YOU')
+
+#else:
+ #print('WRONG INPUT PLEASE TRY AGAIN')
 
 
