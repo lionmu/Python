@@ -1,28 +1,36 @@
 print('WELCOME TO THE PIZZA HUT RESTAURANT')
 print('**************PLEASE SELECT FROM OUR MENU*****************')
-print('OPTION 1 SMALL SIZE PIZZA AT 100Rs')
-print('OPTION 2 MEDIUM PIZZA AT 200Rs ')
-pepperoni_for_small_pizza = 30
-peperoni_for_medium_or_large=50
-small_size_pizza = 100
-medium_pizza=200
-extra_cheese=20
+print('OPTION 1 SMALL SIZE PIZZA')
+print('OPTION 2 MEDIUM SIZE PIZZA')
+print('OPTION 3 LARGE SIZE PIZZA')
 option = int(input('CHOOSE OPTION:'))
+intial_cost=0
 
 if option == 1:
-    print('YOUR PIZZA WILL COST 100Rs')
-    Pepperoni_small=input('DO YOU REQUIRE PEPPERONI:').lower()
-    if Pepperoni_small =='yes':
-       print('YOU WILL BE CHARGED AN EXTRA 30Rs')
-       total_cost=pepperoni_for_small_pizza+small_size_pizza
-       print(f'AND YOUR TOTAL BILL WILL BE {total_cost} Rs')
-       addition_cheese=input('DO YOU WANT EXTRA CHEESE').lower()
-    if extra_cheese=='yes':
-        print('EXTRA CHEESE WILL COST 20Rs')
-        total_cost=medium_pizza
-        print(f'PIZZA WILL COST YOU {total_cost}')
-
-
+    intial_cost+=100
+    print(f'YOUR PIZZA WILL COST {intial_cost}Rs')
+    
+elif option==2:
+    intial_cost+=200
+    print(f'PIZZA WILL COST{intial_cost}Rs')
+    
 else:
-    print('THANK YOU')
+    intial_cost+=300
+    print(f'PIZZA WILL COST {intial_cost}Rs')
+
+additional_pepperoni=input('DO YOU WANR EXTRA PEPPERONI:').lower
+if additional_pepperoni=='yes':
+     if option==1:
+      intial_cost+=30
+    
+else:
+      intial_cost+=50
+         
+additional_cheese=input('DO YOU REQUIRE EXTRA CHEESE:').lower
+if additional_cheese=='Yes':
+     intial_cost+=20
+          
+print(f'YOUR TOTAL BILL WILL BE {intial_cost}Rs')  
+print('THANK YOU')
+
 
